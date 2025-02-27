@@ -16,8 +16,10 @@ docker 설치
 ```bash
 sudo wget -qO- http://get.docker.com/ | sh
 ```
+
 디렉토리 생성하고 이동 
 ```bash
+
 mkdir -p ~/hpe_project
 cd ~/hpe_project
 ```
