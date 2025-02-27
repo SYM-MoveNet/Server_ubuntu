@@ -1,19 +1,13 @@
 # 서버_우분투
 설정_서버_도커
 
-## 프로젝트 개요
-이 프로젝트는 JSON 형식의 데이터를 분석하여 비디오에서 **사람의 자세(Human Pose)**를 출력하는 시스템입니다.  
-Docker를 사용하여 분석하며, 결과는 JSON 파일로 저장됩니다.
-
-##서버구축완료 도커설치
-ubuntu 서버를 구축한다음 하는 서버구축 
 
 # 서버 접속
 ```bash
 ssh ubuntu@3.37.3.170
 ```
 
-## 1️⃣ Ubuntu 서버에서 Git 설치 (이미 설치되어 있으면 생략)
+## Ubuntu 서버에서 Git 설치 (이미 설치되어 있으면 생략)
 
 ```bash
 sudo apt update && sudo apt install -y git
@@ -24,7 +18,7 @@ sudo apt update && sudo apt install -y git
 git clone https://github.com/dlgkrwls/Server_ubuntu.git
 ```
 
-docker 설치
+## ubuntu 서버에 필요한 docker 설치
 ```bash
 sudo wget -qO- http://get.docker.com/ | sh
 ```
