@@ -12,6 +12,13 @@ ubuntu 서버를 구축한다음 하는 서버구축
 # 서버 접속
 ssh ubuntu@3.37.3.170
 
+# Ubuntu 서버에서 GitHub 저장소 클론 받기
+
+## 1️⃣ Ubuntu 서버에서 Git 설치 (이미 설치되어 있으면 생략)
+```bash
+sudo apt update && sudo apt install -y git
+
+
 docker 설치
 ```bash
 sudo wget -qO- http://get.docker.com/ | sh
