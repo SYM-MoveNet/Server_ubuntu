@@ -8,22 +8,28 @@ Docker를 사용하여 분석하며, 결과는 JSON 파일로 저장됩니다.
 ##서버구축완료 도커설치
 ubuntu 서버를 구축한다음 하는 서버구축 
 
+```bash
+# 서버 접속
+ssh ubuntu@3.37.3.170
+
 docker 설치
 ```bash
 sudo wget -qO- http://get.docker.com/ | sh
 ```
+디렉토리 생성하고 이동 
+```bash
+mkdir -p ~/hpe_project
+cd ~/hpe_project
+```
+
+github에 있는 Dockerfile, requirments.txt를 만든 디렉토리로 이동
+
 
 
 
 ## 실행 방법
 서버에 접속한 후, 프로젝트 디렉토리로 이동하여 Docker를 실행합니다.
 
-```bash
-# 서버 접속
-ssh ubuntu@3.37.3.170
-
-# 프로젝트 디렉토리 이동
-cd ./hpe_project
 
 # Docker 이미지 빌드 (필요 시 실행)
 docker build -t sym .
