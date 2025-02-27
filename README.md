@@ -5,6 +5,16 @@
 이 프로젝트는 JSON 형식의 데이터를 분석하여 비디오에서 **사람의 자세(Human Pose)**를 출력하는 시스템입니다.  
 Docker를 사용하여 분석하며, 결과는 JSON 파일로 저장됩니다.
 
+##서버구축완료 도커설치
+ubuntu 서버를 구축한다음 하는 서버구축 
+
+docker 설치
+```bash
+sudo wget -qO- http://get.docker.com/ | sh
+```
+
+
+
 ## 실행 방법
 서버에 접속한 후, 프로젝트 디렉토리로 이동하여 Docker를 실행합니다.
 
