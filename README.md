@@ -30,5 +30,7 @@ docker run --rm -it sym --vid_path "sym/data/비디오.mp4"
 scp local_video.mp4 ubuntu@3.37.3.170:~/hpe_project/sym/data/
 ```
 local_video.mp4 → 내 컴퓨터에 있는 동영상 파일 이름
+
 ubuntu@3.37.3.170 → 서버 로그인 정보
+
 ~/hpe_project/sym/data/ → 서버에서 저장할 폴더 경로
