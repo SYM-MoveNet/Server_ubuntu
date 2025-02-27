@@ -46,7 +46,6 @@ docker run --rm -it sym
 docker run --rm -it sym --vid_path "sym/data/비디오.mp4"
 ```
 
----
 ## 동영상 업로드 방법
 로컬 컴퓨터에서 서버로 동영상을 업로드하려면 아래 명령어를 사용하세요. (PowerShell 추천)
 
