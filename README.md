@@ -7,23 +7,23 @@
 ssh ubuntu@3.37.3.170
 ```
 
-## Ubuntu 서버에서 Git 설치 (이미 설치되어 있으면 생략)
+### Ubuntu 서버에서 Git 설치 (이미 설치되어 있으면 생략)
 
 ```bash
 sudo apt update && sudo apt install -y git
 ```
 
-프로젝트 다운
+### 프로젝트 다운
 ```bash
 git clone https://github.com/dlgkrwls/Server_ubuntu.git
 ```
 
-## ubuntu 서버에 필요한 docker 설치
+### ubuntu 서버에 필요한 docker 설치
 ```bash
 sudo wget -qO- http://get.docker.com/ | sh
 ```
 
-디렉토리 이동 
+### 디렉토리 이동 
 ```bash
 cd ~/Server_ubuntu/hpe_project
 ```
@@ -33,10 +33,12 @@ cd ~/Server_ubuntu/hpe_project
 동영상 분석 실행방법
 
 
-# Docker 이미지 빌드 (필요 시 실행)
+### Docker 이미지 빌드 (필요 시 실행)
 docker build -t sym .
 
-# Docker 실행 (비디오 분석)
+### Docker 실행 (비디오 분석)
+
+```bash
 docker run --rm -it sym
 docker run --rm -it sym --vid_path "sym/data/비디오.mp4"
 ```
