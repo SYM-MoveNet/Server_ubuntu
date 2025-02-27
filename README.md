@@ -29,14 +29,14 @@ docker 설치
 sudo wget -qO- http://get.docker.com/ | sh
 ```
 
-디렉토리 생성하고 이동 
+디렉토리 이동 
 ```bash
 cd ~/Server_ubuntu/hpe_project
 ```
 
 
 ## 실행 방법
-서버에 접속한 후, 프로젝트 디렉토리로 이동하여 Docker를 실행합니다.
+동영상 분석 실행방법
 
 
 # Docker 이미지 빌드 (필요 시 실행)
@@ -46,6 +46,8 @@ docker build -t sym .
 docker run --rm -it sym
 docker run --rm -it sym --vid_path "sym/data/비디오.mp4"
 ```
+
+동영상 실행시 data/out/비디오.json 파일 생성
 
 ## 동영상 업로드 방법
 로컬 컴퓨터에서 서버로 동영상을 업로드하려면 아래 명령어를 사용하세요. (PowerShell 추천)
