@@ -14,6 +14,7 @@ ssh ubuntu@3.37.3.170
 
 
 ## 1️⃣ Ubuntu 서버에서 Git 설치 (이미 설치되어 있으면 생략)
+
 ```bash
 sudo apt update && sudo apt install -y git
 ```
