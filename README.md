@@ -15,7 +15,7 @@ sudo apt update && sudo apt install -y git
 
 ### 프로젝트 다운
 ```bash
-git clone https://github.com/dlgkrwls/Server_ubuntu.git
+git clone git@github.com:dlgkrwls/Server_ubuntu.git
 ```
 
 ### ubuntu 서버에 필요한 docker 설치
