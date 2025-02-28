@@ -37,19 +37,28 @@ cd ~/Server_ubuntu/hpe_project
 docker build -t sym .
 
 ### Docker 실행 (비디오 분석)
+웹서버에서 저장시키면되는 파일경로는  
 
 ```bash
-docker run --rm -it sym
-docker run --rm -it sym --vid_path "sym/data/비디오.mp4"
+docker run --rm -it -v /home/ubuntu/hpe_project/sym/data/output/:/app/sym/data/output/sym --vid_path "./sym/data/동영상이름.mp4"
 ```
 
-동영상 실행시 data/out/비디오.json 파일 생성
+호스트(Ubuntu)의 /home/ubuntu/hpe_project/sym/data/에 있는 동영상을 분석    
+컨테이너 내부에서 동영상을 처리하여 JSON 파일을 생성
+분석이 끝나면, 결과 JSON 파일이 Ubuntu(호스트)에 저장됨
+컨테이너가 종료되더라도 JSON 파일은 유지됨!
 
+동영상 실행시 data/out/비디오.json 파일 생성
+```bash
+ls -lh /home/ubuntu/hpe_project/sym/data/output/
+```
+여기에 동영상이름.json이 존재하게됨
 ## 동영상 업로드 방법
+# 동영상을 저장할 경로: /home/ubuntu/hpe_project/sym/data/
 로컬 컴퓨터에서 서버로 동영상을 업로드하려면 아래 명령어를 사용하세요. (PowerShell 추천)
 
 ```bash
-scp local_video.mp4 ubuntu@3.37.3.170:~/hpe_project/sym/data/
+scp local_video.mp4 ubuntu@3.37.3.170:~/hpe_project/data/
 ```
 
 - local_video.mp4 → 내 컴퓨터에 있는 동영상 파일 이름
