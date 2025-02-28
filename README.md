@@ -48,7 +48,6 @@ docker run --rm -it -v /home/ubuntu/hpe_project/sym/data/output/:/app/sym/data/o
 분석이 끝나면, 결과 JSON 파일이 Ubuntu(호스트)에 저장됨
 컨테이너가 종료되더라도 JSON 파일은 유지됨!
 
-동영상 실행시 data/out/비디오.json 파일 생성
 ```bash
 ls -lh /home/ubuntu/hpe_project/sym/data/output/
 ```
