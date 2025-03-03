@@ -40,7 +40,7 @@ docker build -t sym .
 웹서버에서 저장시키면되는 파일경로는  
 
 ```bash
-docker run --rm -it -v /home/ubuntu/hpe_project/sym/data/output/:/app/sym/data/output/sym --vid_path "./sym/data/동영상이름.mp4"
+docker run --rm -it -v /home/ubuntu/hpe_project/sym/data/output/:/app/sym/data/output/ sym --vid_path "./sym/data/동영상이름.mp4"
 ```
 
 호스트(Ubuntu)의 /home/ubuntu/hpe_project/sym/data/에 있는 동영상을 분석    
