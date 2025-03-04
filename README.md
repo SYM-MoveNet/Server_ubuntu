@@ -48,56 +48,6 @@ sudo docker run --rm -it \
 
 
 
-
-
-
-
-
-
-
-# 서버_우분투
-설정_서버_도커
-
-# 이미지를 다운받고 사용하는법
-
-### ubuntu 서버에 필요한 docker 설치
-```bash
-sudo wget -qO- http://get.docker.com/ | sh
-```
-
-## Docker PUll
-Docker Hub에 있는 이미지를 pull 받는법
-```bash
-sudo docker pull leehakjin/sym:lastest
-```
-image pull확인방법
-```bash
-docker images
-```
-
-## 실행 방법
-동영상 분석 실행방법
-
-### Docker 실행 (비디오 분석)
-호스트(리눅스서버)경로: 서버에 맞게 파일에 맞춰서
-컨테이너 내부경로:/app/sym/data/output/
-
-예시
-```bash
-sudo docker run --rm -it   -v /home/leehakjin/output:/app/sym/data/output   leehakjin/sym:latest --vid_path "./sym/data/동영상이름.mp4"
-```
-
-호스트(Ubuntu)의 /home/leehakjin/output/에 있는 동영상을 분석    
-- 컨테이너 내부에서 동영상을 처리하여 JSON 파일을 생성
-- JSON 파일이 Ubuntu(호스트)에 저장됨
-- 컨
-
-```bash
-ls -lh /home/ubuntu/hpe_project/sym/data/output/
-```
-여기에 동영상이름.json이 존재하게됨
-
-
 ## 개발자
 코드적으로 확인
 ### 프로젝트 다운
@@ -105,10 +55,14 @@ ls -lh /home/ubuntu/hpe_project/sym/data/output/
 git clone git@github.com:dlgkrwls/Server_ubuntu.git
 ```
 
-```bash
-scp local_video.mp4 ubuntu@IP:~/hpe_project/data/
-```
 
-- local_video.mp4 → 내 컴퓨터에 있는 동영상 파일 이름
-- ubuntu@IP → 서버 로그인 정보
-- ~/hpe_project/sym/data/ → 서버에서 저장할 폴더 경로
+    '''
+    inputs_2d index별 부위
+    [0] : 엉덩이 중심, [1] : 오른쪽 엉덩이, [2] : 오른쪽 무릎. [3] : 오른쪽 발, [4] : 왼쪽 엉덩이, [5] : 왼쪽 무릎, [6] : 왼쪽 발
+    [7] : 엉덩이 중심과 어깨 중심의 중앙, [8] : 어깨 중심, [9] : 눈 중심, [10] : 왼쪽 어깨, [11] : 왼쪽 엘보우, [12] : 왼쪽 손목
+    [13] : 오른쪽 어깨, [14] : 오른쪽 엘보우, [15] : 오른쪽 손목
+    '''
+
+mk_json_3D_json.py
+동영상을 입력받아  movenet 2D HPE를 poseauge가 리프팅하여 관절 좌표 3D관절좌표
+
