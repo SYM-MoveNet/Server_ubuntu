@@ -24,7 +24,7 @@ Docker version 27.2.0, build 3ab4256
 ## **2  Docekr Hub 에서 이미지 다운로드**
 Docker Hub에 업로드된 leehakjin/sym:latest 이미지를 다운로드하려면 다음 명령어를 실행합니다.
 ```bash
-sudo docker pull leehakjin/sym:latest
+docker pull leehakjin/sym:lastest
 ```
 이미지가 정상적으로 다운로드되었는지 확인하려면
 ## 출력예시
