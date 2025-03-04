@@ -42,7 +42,7 @@ leehakjin/sym   latest    5f7f6e9cd07a   3 days ago   8.04GB
 ```bash
 docker run --rm -it \
   -v /home/leehakjin/output:/app/sym/data/output \
-  leehakjin/sym:latest --vid_path "/app/sym/data/output/동영상이름.mp4"
+  leehakjin/sym:lastest --vid_path "/app/sym/data/output/동영상이름.mp4"
 ```
 동영상 이름의 json은 서버의 비디오파일경로 output에 나오게됩니다.
 
