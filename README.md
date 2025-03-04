@@ -18,19 +18,8 @@ image pull확인방법
 docker images
 ```
 
-
-### 디렉토리 이동 
-```bash
-cd ~/Server_ubuntu/hpe_project
-```
-
-
 ## 실행 방법
 동영상 분석 실행방법
-
-
-### Docker 이미지 빌드 (필요 시 실행)
-docker build -t sym .ac
 
 ### Docker 실행 (비디오 분석)
 호스트(리눅스서버)경로: 서버에 맞게 파일에 맞춰서
