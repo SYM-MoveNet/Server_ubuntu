@@ -22,7 +22,7 @@ Docker version 27.2.0, build 3ab4256
 ```
 
 ## **2  Docekr Hub 에서 이미지 다운로드**
-Docker Hub에 업로드된 leehakjin/sym:lastest 이미지를 다운로드하려면 다음 명령어를 실행합니다.
+Docker Hub에 업로드된 leehakjin/sym1:lastest 이미지를 다운로드하려면 다음 명령어를 실행합니다.
 ```bash
 docker pull leehakjin/sym1:latest
 ```
@@ -44,7 +44,7 @@ docker run --rm -it \
   -v /home/(유저명)/data:/app/sym/data/output \
   leehakjin/sym:lastest --vid_path "[data에 있는 동영상이름.mp4]"
 ```
-동영상 이름의 json은 서버의 비디오파일경로 output에 나오게됩니다.
+동영상 이름의 json은 서버의 비디오파일경로 data에 나오게됩니다.
 
 
 
