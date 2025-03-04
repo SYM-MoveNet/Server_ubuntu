@@ -48,9 +48,6 @@ sudo docker run --rm -it \
 
 
 
-## 개발자
-코드적으로 확인
-
 ## JSON 데이터 구조 설명
 
 `mk_json_3D_json.py`를 실행하면 **각 프레임별 3D 관절 좌표 데이터**가 JSON 형식으로 저장됩니다.  
