@@ -9,7 +9,7 @@ Docker를 사용하여 비디오를 분석하고, 분석 결과(JSON 파일)를 
 Ubuntu 서버에서 Docker가 설치되어 있지 않다면, 다음 명령어를 실행하여 설치합니다.
 
 ```bash
-sudo wget -qO- https://get.docker.com/ | sh
+wget -qO- https://get.docker.com/ | sh
 ```
 설치가 완료되면 Docker 버전을 확인하여 정삭적으로 설치되었는지 확인
 
