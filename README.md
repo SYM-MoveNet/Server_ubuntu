@@ -31,7 +31,7 @@ sudo docker pull leehakjin/sym:latest
 ```bash
 REPOSITORY      TAG       IMAGE ID       CREATED      SIZE
 leehakjin/sym   latest    5f7f6e9cd07a   3 days ago   8.04GB
-'''
+```
 
 
 ## **3. 비디오 분석 실행**
