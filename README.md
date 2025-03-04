@@ -37,11 +37,11 @@ leehakjin/sym   latest    5f7f6e9cd07a   3 days ago   8.04GB
 ## **3. 비디오 분석 실행**
 # 컨테이너 실행(비디오분석)
 호스트(Ubuntu 서버)에서 분석할 비디오가 위치한 경로를 컨테이너 내부로 마운트하여 실행합니다.
-- 호스트(Ubuntu) 비디오 파일 경로: ex) /home/leehakjin/output/
+- 호스트(Ubuntu) 비디오 파일 경로: ex) /home/(유저명)/output/
 - 컨테이너 내부에서 사용할 경로 :/app/sym/data/output/
 ```bash
 docker run --rm -it \
-  -v /home/leehakjin/output:/app/sym/data/output \
+  -v /home/(유저명)/output:/app/sym/data/output \
   leehakjin/sym:lastest --vid_path "/app/sym/data/output/동영상이름.mp4"
 ```
 동영상 이름의 json은 서버의 비디오파일경로 output에 나오게됩니다.
