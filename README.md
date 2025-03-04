@@ -40,7 +40,7 @@ leehakjin/sym   latest    5f7f6e9cd07a   3 days ago   8.04GB
 - 호스트(Ubuntu) 비디오 파일 경로: ex) /home/leehakjin/output/
 - 컨테이너 내부에서 사용할 경로 :/app/sym/data/output/
 ```bash
-sudo docker run --rm -it \
+docker run --rm -it \
   -v /home/leehakjin/output:/app/sym/data/output \
   leehakjin/sym:latest --vid_path "/app/sym/data/output/동영상이름.mp4"
 ```
