@@ -28,29 +28,25 @@
 코드에서는 유클리드 거리의 루트를 사용하지 않고, x, y, z **각각의 절댓값 차이**를 구한 후 DTW를 적용합니다.
 
 ### **좌표별 거리 계산 (코드 방식)**
-\[
+$$
 d_x = |x_{\text{ref}} - x_{\text{user}}|, \quad
 d_y = |y_{\text{ref}} - y_{\text{user}}|, \quad
 d_z = |z_{\text{ref}} - z_{\text{user}}|
-\]
+$$
 
 여기서,  
-- \( (x_{\text{ref}}, y_{\text{ref}}, z_{\text{ref}}) \) = Reference 영상의 특정 관절 좌표  
-- \( (x_{\text{user}}, y_{\text{user}}, z_{\text{user}}) \) = 사용자의 실시간 관절 좌표  
+- $ (x_{\text{ref}}, y_{\text{ref}}, z_{\text{ref}}) $ = Reference 영상의 특정 관절 좌표  
+- $ (x_{\text{user}}, y_{\text{user}}, z_{\text{user}}) $ = 사용자의 실시간 관절 좌표  
 
-### **구체적인 점수 산정 과정**  
-1. **각 프레임마다 Reference 영상과 사용자 영상의 3D 좌표 차이를 계산**  
-2. **각 관절에 대해 x, y, z 각각의 차이를 DTW(Dynamic Time Warping) 알고리즘으로 비교**  
-3. **각 관절별(x, y, z) DTW 점수를 평균 내어 유사도 점수 계산**  
-4. **20프레임마다 점수를 갱신하며, 최근 10프레임을 유지하여 누적 평가**  
-5. **최종적으로 100점 기준으로 Min-Max Scaling을 적용하여 점수 환산**  
+---
 
 ### **100점 환산 공식**
-\[
+$$
 \text{score} = 100 - \left(\frac{\text{DTW 점수} - 0.6}{2.5 - 0.6} \times 100\right)
-\]
+$$
 - 최소 기준값(0.6)보다 작은 경우 100점 부여  
 - 최대 기준값(2.5)보다 크면 0점에 가까운 점수 부여  
+ 
 
 ---
 
