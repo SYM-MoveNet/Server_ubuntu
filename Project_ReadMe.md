@@ -23,29 +23,32 @@
 
 ---
 
+
 ## **점수 계산 방식 (좌표 차이 기반 DTW 적용)**  
 각 프레임에서 **Reference 3D 좌표**와 **실시간 3D 좌표** 간의 **x, y, z 차이**를 측정하여 점수를 계산합니다.  
 코드에서는 유클리드 거리의 루트를 사용하지 않고, x, y, z **각각의 절댓값 차이**를 구한 후 DTW를 적용합니다.
 
-### **좌표별 거리 계산 (코드 방식)**
-$$
+### **좌표별 거리 계산 (코드 방식)**  
+\[
 d_x = |x_{\text{ref}} - x_{\text{user}}|, \quad
 d_y = |y_{\text{ref}} - y_{\text{user}}|, \quad
 d_z = |z_{\text{ref}} - z_{\text{user}}|
-$$
+\]
 
 여기서,  
-- $ (x_{\text{ref}}, y_{\text{ref}}, z_{\text{ref}}) $ = Reference 영상의 특정 관절 좌표  
-- $ (x_{\text{user}}, y_{\text{user}}, z_{\text{user}}) $ = 사용자의 실시간 관절 좌표  
+- \( (x_{\text{ref}}, y_{\text{ref}}, z_{\text{ref}}) \) = Reference 영상의 특정 관절 좌표  
+- \( (x_{\text{user}}, y_{\text{user}}, z_{\text{user}}) \) = 사용자의 실시간 관절 좌표  
 
 ---
 
-### **100점 환산 공식**
-$$
+### **100점 환산 공식**  
+\[
 \text{score} = 100 - \left(\frac{\text{DTW 점수} - 0.6}{2.5 - 0.6} \times 100\right)
-$$
+\]
 - 최소 기준값(0.6)보다 작은 경우 100점 부여  
 - 최대 기준값(2.5)보다 크면 0점에 가까운 점수 부여  
+
+---
  
 
 ---
