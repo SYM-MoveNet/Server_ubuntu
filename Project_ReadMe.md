@@ -32,30 +32,7 @@ DTW(Dynamic Time Warping)를 적용하면 Reference 영상과 사용자의 동�
 ## **점수 계산 방식 (DTW 적용 후 맨해튼 거리 비교)**  
 각 프레임에서 **Reference 3D 좌표**와 **실시간 3D 좌표** 간의 **x, y, z 차이**를 측정하여 점수를 계산합니다.  
 **DTW를 적용하여 Reference와 사용자의 동작 싱크를 맞춘 후, 맨해튼 거리를 사용하여 x, y, z 각각의 절댓값 차이를 구해 유사도를 평가합니다.**  
-
-### **좌표별 거리 계산 (코드 방식)**  
-\[
-d_x = |x_{\text{ref}} - x_{\text{user}}|, \quad
-d_y = |y_{\text{ref}} - y_{\text{user}}|, \quad
-d_z = |z_{\text{ref}} - z_{\text{user}}|
-\]
-
-여기서,  
-- \( (x_{\text{ref}}, y_{\text{ref}}, z_{\text{ref}}) \) = Reference 영상의 특정 관절 좌표  
-- \( (x_{\text{user}}, y_{\text{user}}, z_{\text{user}}) \) = 사용자의 실시간 관절 좌표
-
 ---
-
-
-### **100점 환산 공식**  
-\[
-\text{score} = 100 - \left(\frac{\text{DTW 점수} - 최소 기준값}{최대 기준값 - 최속기준값} \times 100\right)
-\]
-- 최소 기준값보다 작은 경우 100점 부여  
-- 최대 기준값보다 크면 0점에 가까운 점수 부여  
-
----
-
 
 ## **기술 스택**  
 
@@ -65,8 +42,7 @@ d_z = |z_{\text{ref}} - z_{\text{user}}|
 | **3D Pose Lifting**  | VideoPose3D |
 | **시간 비동기 처리**  | DTW (Dynamic Time Warping) |
 | **운동 점수 채점**  | 3D 좌표 차이 기반 평가, 20프레임마다 갱신, 10프레임 슬라이딩 윈도우 |
-| **백엔드 & 배포**  | Docker, FastAPI |
-| **프론트엔드**  | React (웹 앱) |
+| **백엔드 & 배포**  | Docker |
 | **데이터 저장**  | JSON |
 
 ---
