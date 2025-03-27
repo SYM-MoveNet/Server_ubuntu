@@ -10,7 +10,9 @@ from dtw import dtw
 import statistics
 import json
 import os
-
+##############
+#도커파일에서 실제로 돌아가는 코드
+##############
 matplotlib.use('Agg')
 
 from movenet.models.model_factory import load_model
